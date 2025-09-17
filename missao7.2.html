@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missão 7.2 - Mini Quiz</title>
+    <style>
+        button:focus {
+            outline: 2px solid #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <p>JavaScript roda no navegador?</p>
+    <button class="alt" data-ok="true">Sim</button>
+    <button class="alt">Não</button>
+    <p id="resposta"></p>
+
+    <script>
+        document.querySelectorAll('.alt').forEach(btn => {
+            btn.onclick = () => {
+                document.querySelector('#resposta').textContent =
+                    btn.dataset.ok ? "Correto!" : "Tente novamente";
+            };
+        });
+    </script>
+</body>
+</html>

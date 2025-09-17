@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missão 6</title>
+    <style>
+        button:focus {
+            outline: 2px solid #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <button aria-label="Salvar nome no navegador" onclick="salvarNome()">Salvar nome</button>
+    <button aria-label="Mostrar nome salvo" onclick="mostrarNome()">Mostrar nome</button>
+    <p id="resultado"></p>
+
+    <script>
+        function salvarNome() {
+            localStorage.setItem('nome', 'Ruan');
+            alert('Nome salvo com sucesso!');
+        }
+
+        function mostrarNome() {
+            const nome = localStorage.getItem('nome');
+            document.getElementById('resultado').textContent = nome ? `Nome salvo: ${nome}` : 'Nenhum nome salvo.';
+        }
+    </script>
+</body>
+</html>
