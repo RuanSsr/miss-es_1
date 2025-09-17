@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinamento missao4</title>
+</head>
+
+<body>
+    <h1>Botão que troca o texto</h1>
+    <button onclick="mudarCor()">Mudar cor de fundo</button>
+
+    <button id="btnSaudar">clique aqui</button>
+    <p id="mensagem"></p>
+
+    <script>
+      function mudarCor() {
+    const corAleatoria = "#" + Math.floor(Math.random()*16777215).toString(16);
+    document.body.style.backgroundColor = corAleatoria;
+}
+
+        const botao = document.querySelector('#btnSaudar');
+        const msg = document.querySelector('#mensagem');
+
+        botao.addEventListener('click', () => {
+            msg.textContent = 'Olá! Você clicou no botão!';
+        });
+    </script>
+</body>
+</html>
